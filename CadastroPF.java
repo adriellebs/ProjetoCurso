@@ -1,44 +1,36 @@
 package Projeto;
 
-public class CadastroPF extends ProjetoCurso{
+public class CadastroPF extends Pessoa{
 
-	private int cpf;
-	private String nascimento;
+	private String cpf;
+	private String dataNascimento;
 	
 	
-	public CadastroPF(String nome, String endereco, int telefone,
-			int cpf, String nascimento) 
-	{
+	public CadastroPF(String nome, String endereco, String telefone,String cpf, String dataNascimento) {
 		super(nome, endereco, telefone); 
 		this.cpf = cpf;
-		this.nascimento = nascimento;
-		
+		this.dataNascimento = dataNascimento;	
 		
 	}
 
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
 
-	public String getNascimento() {
-		return nascimento;
+	public String getDataNascimento() {
+		return dataNascimento;
 	}
 
 
-	public void setNascimento(String nascimento) {
-		this.nascimento = nascimento;
-	}
-	
-	
-	
-	
-	
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}	
 
 }

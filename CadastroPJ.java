@@ -1,13 +1,12 @@
 package Projeto;
 
-public class CadastroPJ extends ProjetoCurso{
+public class CadastroPJ extends Pessoa{
 	
-	private int cnpj;
+	private String cnpj;
 	private String segmento;
 	
 
-	public CadastroPJ(String nome, String endereco, int telefone, 
-			int cnpj, String segmento) {
+	public CadastroPJ(String nome, String endereco, String telefone, String cnpj, String segmento) {
 		super(nome, endereco, telefone);
 		this.cnpj = cnpj;
 		this.segmento = segmento;
@@ -15,12 +14,12 @@ public class CadastroPJ extends ProjetoCurso{
 	}
 
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 
@@ -34,4 +33,5 @@ public class CadastroPJ extends ProjetoCurso{
 		this.segmento = segmento;
 	}
 
+	
 }

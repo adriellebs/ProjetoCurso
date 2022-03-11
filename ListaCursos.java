@@ -1,13 +1,12 @@
 package Projeto;
 
-public class ListaCursos extends ProjetoCurso{
+public class ListaCursos{
 
 	private String curso1,curso2,curso3;
 	
 	
-	public ListaCursos(String nome, String curso1, String curso2, String curso3) 
+	public ListaCursos(String curso1, String curso2, String curso3) 
 	{
-		super(nome);
 		this.curso1 = curso1;
 		this.curso2 = curso2;
 		this.curso3 = curso3;
