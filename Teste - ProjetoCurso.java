@@ -13,11 +13,11 @@ public class TesteCurso  {
 		do
 		{
 			System.out.println("\n---------------------------------------------");
-			System.out.println("\n Bem vindo!!! Digite sua opÁ„o: ");
+			System.out.println("\n Bem vindo!!! Digite sua op√ß√£o: ");
 			System.out.println("\n (1) Conhecer os cursos ");
-			System.out.println("\n (2) Cadastrar - Pessoa FÌsica ");
-			System.out.println("\n (3) Cadastrar - Pessoa JurÌdica ");
-			System.out.println("\n (0) Sair da p·gina ");
+			System.out.println("\n (2) Cadastrar - Pessoa F√≠sica ");
+			System.out.println("\n (3) Cadastrar - Pessoa Jur√≠dica ");
+			System.out.println("\n (0) Sair da p√°gina ");
 			op = leia.nextInt();
 			
 			switch(op)
@@ -25,7 +25,7 @@ public class TesteCurso  {
 			case 1:
 				leia.nextLine();
 				System.out.println("\nBem vindo ao nosso Projeto!!!"
-						+ "\nOs cursos disponÌveis, s„o:"
+						+ "\nOs cursos dispon√≠veis, s√£o:"
 						+ "\nTech"
 						+ "\nContabilidade"
 						+ "\nMarketing");
