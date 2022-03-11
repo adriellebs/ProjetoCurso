@@ -45,5 +45,5 @@ A seguinte linguagem de programação foi usada:
 
 
 <h4 align="center">
-   Feito com 💖 por <a href="https://www.linkedin.com/in/aneska-karina-7521795b/" target="_blank"> Aneska </a>, Adrielle, Heitor, Aline e Jefferson.
+   Feito com 💖 por <a href="https://www.linkedin.com/in/aneska-karina-7521795b/" target="_blank"> Aneska </a>, <a href="https://www.linkedin.com/in/adrielle-barros-00809622a">Adrielle</a>, Heitor, <a href="linkedin.com/in/alinetiburcio" target="_blank"> Aline</a> e <a href="https://www.linkedin.com/in/jeffsouza01/?_l=pt_BR">Jefferson</a>.
 </h4>
