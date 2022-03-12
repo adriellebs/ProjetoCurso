@@ -1,4 +1,5 @@
 package Projeto;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Cursos {
@@ -10,7 +11,17 @@ public class Cursos {
 	private String curso;
 	private String escolhaCurso;
 	private String aluno;
-	private String menu;
+	private String menu = "Os segmentos e cursos disponiveis são:\n\n"
+			+ "Tecnologia: \n\tDesign"
+			+ "\n\tData Science\n"
+			+ "\tDesenvolvimento Web\n\n"
+			+ "Marketing:"
+			+ "\n\tNeuromarketing\n"
+			+ "\tMarketing Digital"
+			+ "\n\nContabilidade e Finanças:\n"
+			+ "\tMatemática Financeira\n"
+			+ "\tControladoria\n"
+			+ "\tAnálise de Balanços";
 	
 	public Cursos (String curso, String professora, String segmento, String escolhaCurso, String aluno, String menu)
 	{
@@ -75,15 +86,32 @@ public class Cursos {
 
 	public void escolherCurso() {
 		
-		System.out.println("\nDigite 0 para vizualizar o menu ou número do segmento de sua escolha: \n1 - Tecnologia\n2 - Marketing\n3 - Contabilidade e Finanças");
-			int segmento = leia.nextInt();
+		System.out.println(this.menu);
 		
+		try {
+			
+			System.out.println("\nDigite o número do segmento de sua escolha: \n1 - Tecnologia\n2 - Marketing\n3 - Contabilidade e Finanças");
+			int segmento = leia.nextInt();
+			
+			while (segmento < 1 || segmento > 4) {
+				leia.nextLine();
+				System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Tecnologia\n2 - Marketing\n3 - Contabilidade e Finanças");
+				segmento = leia.nextInt();
+				
+			}
+			
 			switch(segmento) {
 			case 1:
 				setSegmento("Tecnologia");
 				System.out.println("\nEscolha o seu curso: \n1 - Design\n2 - Data Science\n3 - Desenvolvimento Web");
 				int escolha = leia.nextInt();
 			
+				while (escolha < 1 || escolha > 4) {
+					leia.nextLine();
+					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Design \n2 - Data Science \n3 - Desenvolvimento Web");
+					escolha = leia.nextInt();
+						
+				}
 				switch(escolha) {
 				case 1: 
 					setCurso("Design");
@@ -100,6 +128,13 @@ public class Cursos {
 				setSegmento("Marketing");
 				System.out.println("\nEscolha o seu curso: \n1 - Neuromarketing\n2 - Marketing Digital");
 				int escolher = leia.nextInt();
+				
+				while (escolher < 1 || escolher > 4) {
+					leia.nextLine();
+					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Neuromarketing \n2 - Marketing Digital");
+					escolher = leia.nextInt();
+						
+				}
 				switch(escolher) {
 				case 1: 
 					setCurso("Neuromarketing");
@@ -113,6 +148,14 @@ public class Cursos {
 				setSegmento("Contabilidade e Finanças");
 				System.out.println("\nEscolha o seu curso: \n1 - Matemática Financeira\n2 - Controladoria\n3 - Análise de balanços");
 				int escolh = leia.nextInt();
+				
+				while (escolh < 1 || escolh > 4) {
+					leia.nextLine();
+					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Matemática Financeira \n2 - Controladoria \n3 - Análise de balanços");
+					escolh = leia.nextInt();
+						
+				}
+				
 				switch(escolh) {
 				case 1:
 					setCurso("Matemática Financeira");
@@ -125,22 +168,18 @@ public class Cursos {
 				break;
 				}
 			break;
-			case 0:
-				setMenu("Os segmentos e cursos disponiveis são:\n"
-						+ "Tecnologia: \nDesign"
-						+ "\nData Science\n"
-						+ "Desenvolvimento Web\n\n"
-						+ "Marketing:"
-						+ "\nNeuromarketing\n"
-						+ "Marketing Digital"
-						+ "\n\nContabilidade e Finanças:\n"
-						+ "Matemática Financeira\n"
-						+ "Controladoria\n"
-						+ "Análise de Balanços");
-				System.out.println(getMenu());
-			break;
+							
+			
 		}
-				System.out.println("\n\nteste: você escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
+			
+		} catch (InputMismatchException e) {
+			System.out.println("Tipo de dado invalido, digite uma opção valida");
+			
+		}
+		
+		
+			
+				System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
 	}
 		
 }
