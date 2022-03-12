@@ -14,41 +14,49 @@ public class main {
 
 		System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- "
 				+ "\n\t\t--------- Por favor, nos informe o seu nome para iniciar. ------- ");
-		cad.setNome("nome");
+		cad.setNome();
 		
-		System.out.println("\nQual o seu endereço?");
-		cad.setEndereco("endereço");
+		System.out.println("\nOlá! Preencha com as suas informações: ");
+		System.out.println("\nEndereço: ");
+		cad.setEndereco();
 		
-		System.out.println("\nInforma pra a gente o seu telefone com ddd: ");
-		cad.setTelefone("11");
+		System.out.println("\nTelefone com DDD: ");
+		cad.setTelefone();
 		
-		System.out.println("\nInforma também um endereço de email, por favor? ");
-		cad.setEmail("email");
+		System.out.println("\nE-mail: ");
+		cad.setEmail();
 		
-		System.out.println("\nVocê é uma pessoa física ou jurídica?\nDigite o número equivalente:\n 1 - PF\n 2 - PJ");
+		System.out.println("\nVocê é pessoa física ou jurídica?"
+				+ "\nDigite a opção correspondente:"
+				+ "\n1 - PF"
+				+ "\n2 - PJ");
 		int pessoa = leia.nextInt();
 		
 		switch(pessoa) {
 		case 1:
-			CadastroPF.setTipoDePessoa("Pessoa Física");
-			System.out.println("\nQual o seu CPF?");
-			CadastroPF.setCpf("444");
+			CadastroPF.setTipoDePessoa();
+			System.out.println("\nDigite seu CPF (sem ponto e vírgula): ");
+			CadastroPF.setCpf();
+			CadastroPF.validarCpf();
 			
-			System.out.println("\nDigite a sua data de nascimento: ");
-			CadastroPF.setNascimento("data");
+			System.out.println("\nData de nascimento: ");
+			CadastroPF.setNascimento();
 			
-			System.out.println("\nNos informe com qual gênero você se identifica?\n1 - Feminino\n2 - Masculino\n 3 - Não binário");
+			System.out.println("\nGênero: "
+					+ "\n1 - Feminino"
+					+ "\n2 - Masculino"
+					+ "\n3 - Não binário");
 			int escolha = leia.nextInt();
 			
 			switch(escolha) {
 			case 1:
-				CadastroPF.setGenero("Feminino");
+				CadastroPF.setGenero();
 			break;
 			case 2:
-				CadastroPF.setGenero("Masculino");
+				CadastroPF.setGenero();
 			break;
 			case 3:
-				CadastroPF.setGenero("Não binário");
+				CadastroPF.setGenero();
 			break;
 			}
 			curso.escolherCurso();
@@ -56,11 +64,21 @@ public class main {
 			System.out.println("Você é professor ou aluno?"); //parei aqui
 		break;
 		case 2: 
-			CadastroPF.setTipoDePessoa("Pessoa Juridica");
+			CadastroPF.setTipoDePessoa();
 			System.out.println("");
 		break;
 		}	
-			
+		leia.close();	
 	}
  // falta fazer a pessoa juridica tbm
+
+	private static String setNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static String getNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
