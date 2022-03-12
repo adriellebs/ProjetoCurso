@@ -59,6 +59,7 @@ public class main {
 			
 			String cpf = leia.nextLine(); // Lendo o CPF
 			pessoaFisica.setCpf(cpf); //Atribuindo o CPF
+			pessoaFisica.validarCpf(); //Validando CPF
 			
 			//Data de Nascimento-----------------------------------------------------------------
 			System.out.println("\nDigite a sua data de nascimento, por favor? ");
@@ -92,20 +93,28 @@ public class main {
 			
 		}else {
 			
+			//PJ AQUI /////////////////////////////////////////////////////
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
 		}
 		
-		//Lendo o nome
-		/*
 		
-		
-		
-	
-		
-	*/
 			
 	}
- // falta fazer a pessoa juridica tbm
+
 }

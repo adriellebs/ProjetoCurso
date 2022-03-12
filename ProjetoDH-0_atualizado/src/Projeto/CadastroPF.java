@@ -1,5 +1,7 @@
 package Projeto;
 
+import java.util.Scanner;
+
 public class CadastroPF extends Cadastro {
 	
 	private String cpf;
@@ -44,14 +46,14 @@ public class CadastroPF extends Cadastro {
 
 
 	
-	/*
-	public void validarCpf()
-	{
-		while (getCpf().length()!=11)
-		{
+	
+	public void validarCpf(){
+		Scanner leia = new Scanner(System.in);
+		while (this.getCpf().length() != 11){
 			System.out.println("\nCPF Inválido! Digite seu CPF (sem ponto e vírgula):");
 			this.cpf = leia.nextLine();
 		}
+		
 	}
-	*/
+	
 }
