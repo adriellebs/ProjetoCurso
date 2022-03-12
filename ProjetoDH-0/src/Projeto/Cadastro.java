@@ -27,7 +27,7 @@ public class Cadastro {
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public void setNome() {
 		this.nome = leia.next();
 	}
 
@@ -35,7 +35,7 @@ public class Cadastro {
 		return endereco;
 	}
 
-	public void setEndereco(String endereco) {
+	public void setEndereco() {
 		leia.next();
 		this.endereco = leia.nextLine();
 	}
@@ -44,7 +44,7 @@ public class Cadastro {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone() {
 		leia.next();
 		this.telefone = leia.nextLine();
 	}
@@ -53,7 +53,7 @@ public class Cadastro {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail() {
 		leia.next();
 		this.email = leia.nextLine();
 	}
