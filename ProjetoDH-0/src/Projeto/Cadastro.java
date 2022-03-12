@@ -28,7 +28,8 @@ public class Cadastro {
 	}
 
 	public void setNome() {
-		this.nome = leia.next();
+		leia.next();
+		this.nome = leia.nextLine();
 	}
 
 	public String getEndereco() {

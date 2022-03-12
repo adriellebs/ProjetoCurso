@@ -10,8 +10,9 @@ public class CadastroPF extends Cadastro {
 	private String tipoDePessoa;
 	
 	
-	public CadastroPF(String nome, String endereco, String telefone, String cpf, String nascimento, String genero, String tipoDePessoa) 
+	public CadastroPF(String nome, String endereco, String telefone,String email, String cpf, String nascimento, String genero, String tipoDePessoa) 
 	{
+		super(nome,endereco,telefone,email);
 		this.cpf = cpf;
 		this.nascimento = nascimento;
 		this.genero = genero;
@@ -30,6 +31,7 @@ public class CadastroPF extends Cadastro {
 
 
 	public void setCpf() {
+		leia.next();
 		this.cpf = leia.nextLine();
 	}
 
@@ -40,6 +42,7 @@ public class CadastroPF extends Cadastro {
 
 
 	public void setNascimento() {
+		leia.next();
 		this.nascimento = leia.nextLine();
 	}
 	
@@ -48,6 +51,7 @@ public class CadastroPF extends Cadastro {
 	}
 	
 	public void setGenero() {
+		leia.next();
 		this.genero = leia.nextLine();
 	}
 
@@ -65,7 +69,7 @@ public class CadastroPF extends Cadastro {
 		while (getCpf().length()!=11)
 		{
 			System.out.println("\nCPF Inválido! Digite seu CPF (sem ponto e vírgula):");
-			cpf = leia.nextLine();
+			this.cpf = leia.nextLine();
 		}
 	}
 }

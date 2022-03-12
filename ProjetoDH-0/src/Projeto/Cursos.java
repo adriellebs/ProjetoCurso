@@ -6,14 +6,14 @@ public class Cursos {
 	Scanner leia = new Scanner(System.in);
 	
 	private String segmento;
-	private String professora;
+	private String professor;
 	private String curso;
 	private String escolhaCurso;
 	
-	public Cursos (String curso, String professora, String segmento, String escolhaCurso)
+	public Cursos (String curso, String professor, String segmento, String escolhaCurso)
 	{
 		this.segmento = segmento;
-		this.professora = professora;
+		this.professor = professor;
 		this.curso = curso;
 		this.escolhaCurso = escolhaCurso;
 	}
@@ -31,11 +31,11 @@ public class Cursos {
 	}
 
 	public String getProfessora() {
-		return professora;
+		return professor;
 	}
 
-	public void setProfessora(String professora) {
-		this.professora = leia.nextLine();
+	public void setProfessora() {
+		this.professor = leia.nextLine();
 	}
 
 	public String getCurso() {
@@ -90,8 +90,8 @@ public class Cursos {
 		case 3:
 			setSegmento("Contabilidade e Finanças");
 			System.out.println("\nEscolha o seu curso: \n1 - Matemática Financeira\n2 - Controladoria\n3 - Análise de balanços");
-			int escolh = leia.nextInt();
-			switch(escolh) {
+			int escolha2 = leia.nextInt();
+			switch(escolha2) {
 			case 1:
 				setCurso("Matemática Financeira");
 			break;
