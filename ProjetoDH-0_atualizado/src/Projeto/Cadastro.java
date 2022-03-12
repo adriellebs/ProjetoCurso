@@ -1,57 +1,56 @@
 package Projeto;
-import java.util.Scanner;
 
-public class Cadastro {
-	private String nome;
-	private String endereco;
-	private String telefone;
-	private String email;
+public abstract class Cadastro {
+	protected String nome;
+	protected String endereco;
+	protected String telefone;
+	protected String email;
 	
-	Scanner leia = new Scanner(System.in);
-	
-	public Cadastro (String nome,String endereco,String telefone, String email)
-	{
-		super();
-		this.nome = nome;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.email = email;
-		
-	}
 
 	public Cadastro() {
 		
 	}
 
+
 	public String getNome() {
 		return nome;
 	}
 
+
 	public void setNome(String nome) {
-		this.nome = leia.nextLine();
+		this.nome = nome;
 	}
+
 
 	public String getEndereco() {
 		return endereco;
 	}
 
+
 	public void setEndereco(String endereco) {
-		this.endereco = leia.nextLine();
+		this.endereco = endereco;
 	}
+
 
 	public String getTelefone() {
 		return telefone;
 	}
 
+
 	public void setTelefone(String telefone) {
-		this.telefone = leia.nextLine();
+		this.telefone = telefone;
 	}
+
 
 	public String getEmail() {
 		return email;
 	}
 
+
 	public void setEmail(String email) {
-		this.email = leia.nextLine();
+		this.email = email;
 	}
+
+	
+	
 }
