@@ -43,9 +43,6 @@ public class CadastroPF extends Cadastro {
 				+"\n CPF: "+this.cpf+" Genero: "+this.genero+" Nascimento: "+this.nascimento;
 				
 	}
-
-
-	
 	
 	public void validarCpf(){
 		Scanner leia = new Scanner(System.in);

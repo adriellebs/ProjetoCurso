@@ -7,7 +7,7 @@ public class main {
 	public static void main(String[] args) {
 		int opcaoCadastrar;
 		Scanner leia = new Scanner(System.in);//Criando nosso leitor
-		
+		Cursos curso = new Cursos();
 		//Mensagem de boas vindas
 		System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- "
 				+ "\n\t\t--------- Por favor, nos informe o se você é PF ou PJ para iniciar. ------- ");
@@ -15,6 +15,7 @@ public class main {
 		
 		do{
 			//PF OU PJ??????-----------------------------------------------------------------
+			
 			System.out.println("1-PF\n2-PJ");
 			int opcao = leia.nextInt();//Lendo se é PF ou PJ
 			//Validando PF Ou PJ
@@ -90,6 +91,7 @@ public class main {
 					pessoaFisica.setGenero("Outros");
 				}
 				
+				curso.escolherCurso();
 				//Conferindo se armazenamos tudo na pessoaFisica
 				//System.out.println(pessoaFisica);
 				
@@ -100,6 +102,8 @@ public class main {
 				
 			}
 			
+			
+			System.out.println("\n---------------------------------------------------------");
 			System.out.println("Deseja cadastrar uma nova pessoa?");
 			System.out.println("1 - Sim\n 2 - Não");
 			opcaoCadastrar = leia.nextInt();

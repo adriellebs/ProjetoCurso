@@ -11,6 +11,7 @@ public class Cursos {
 	private String curso;
 	private String escolhaCurso;
 	private String aluno;
+	
 	private String menu = "Os segmentos e cursos disponiveis são:\n\n"
 			+ "Tecnologia: \n\tDesign"
 			+ "\n\tData Science\n"
