@@ -3,35 +3,28 @@ import java.util.Scanner;
 
 public class CadastroPJ extends Cadastro {
 	
-	Scanner leia = new Scanner(System.in);
-	private int cnpj;
+	
+	private String cnpj;
 	private String segmento;
 	
-
-	public CadastroPJ(String nome, String endereco, int telefone, 
-			int cnpj, String segmento) {
-
-		this.cnpj = cnpj;
-		this.segmento = segmento;
+	public CadastroPJ() {
+		
 	}
 
-
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-
-	public void setCnpj(int cnpj) {
-		this.cnpj = leia.nextInt();
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
-
 
 	public String getSegmento() {
 		return segmento;
 	}
 
-
 	public void setSegmento(String segmento) {
-		this.segmento = leia.nextLine();
+		this.segmento = segmento;
 	}
+	
 }

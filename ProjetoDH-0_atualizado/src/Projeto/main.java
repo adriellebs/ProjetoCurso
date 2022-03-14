@@ -92,12 +92,36 @@ public class main {
 				}
 				
 				curso.escolherCurso();
+				
+				//Professor ou Aluno-----------------------------------------------------------------
+				System.out.println("\nVocê é professor ou aluno????");
+				System.out.println("1 - Aluno 2 - Professor");
+				int professorOuAluno = leia.nextInt();
+				
+				while(professorOuAluno < 1  || professorOuAluno> 2) {
+					System.out.println("Opção Inválida, 1- Para Aluno, 2- para Professor");
+					leia.nextLine(); // Limpando o Scanner
+					professorOuAluno = leia.nextInt(); //Lendo novamento Professor ou Aluno
+				}
+				
+				//Validando
+				if(professorOuAluno == 2) {
+					System.out.println("Professor");
+				}else {
+					System.out.println("Aluno");
+				}
+				
 				//Conferindo se armazenamos tudo na pessoaFisica
 				//System.out.println(pessoaFisica);
 				
-			}else {
 				
-				//PJ AQUI /////////////////////////////////////////////////////
+				
+				
+				
+			}else {
+				//Criação do PJ
+				CadastroPJ pessoaJuridica = new CadastroPJ();
+				//Colocar Perguntas Abaixo
 				
 				
 			}
