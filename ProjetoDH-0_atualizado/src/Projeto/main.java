@@ -111,17 +111,17 @@ public class main {
 				}else if (cursoEscolhido.getCurso() == "Data Science") {
 					cursoEscolhido = cursoDataScience;
 				}else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") {
-					cursoEscolhido = cursoDataScience;
+					cursoEscolhido = cursoDesenvolvimento;
 				}else if(cursoEscolhido.getCurso() == "Neuromarketing") {
-					cursoEscolhido = cursoDataScience;
+					cursoEscolhido = cursoNeuromarketing;
 				}else if(cursoEscolhido.getCurso() == "Marketing Digital") {
-					cursoEscolhido = cursoDataScience;
+					cursoEscolhido = cursoMarketingDigital;
 				}else if(cursoEscolhido.getCurso() == "Matemática Financeira") {
-					cursoEscolhido = cursoDataScience;
+					cursoEscolhido = cursoMatematicaFinanceira;
 				}else if(cursoEscolhido.getCurso() == "Controladoria") {
-					cursoEscolhido = cursoDataScience;
-				}else {
 					cursoEscolhido = cursoControladoria;
+				}else {
+					cursoEscolhido = cursoAnalisedeBalanco;
 				}
 				
 				//Professor ou Aluno-----------------------------------------------------------------
