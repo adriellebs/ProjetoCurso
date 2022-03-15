@@ -67,10 +67,16 @@ public class main {
 			CadastroPF.setTipoDePessoa();
 			System.out.println("");
 		break;
-		}	
-		leia.close();	
+		}
+		leia.close();
+		
 	}
  // falta fazer a pessoa juridica tbm
+	
+	
+		
+	
+		
 
 	private static String setNome() {
 		// TODO Auto-generated method stub
