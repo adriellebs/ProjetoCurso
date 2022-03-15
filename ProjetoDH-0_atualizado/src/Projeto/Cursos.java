@@ -10,6 +10,7 @@ public class Cursos {
 	private String segmento;
 	private String professora;
 	private String curso;
+	private CadastroPJ empresaParceira;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
 	private String menu = "Os segmentos e cursos disponiveis são:\n\n"
 			+ "Tecnologia: \n\tDesign"
@@ -31,6 +32,15 @@ public class Cursos {
 	public Cursos(String nomeCurso, String segmento) {
 		this.curso = nomeCurso;
 		this.segmento = segmento;
+	}
+
+	
+	public CadastroPJ getEmpresaParceira() {
+		return empresaParceira;
+	}
+
+	public void setEmpresaParceira(CadastroPJ empresaParceira) {
+		this.empresaParceira = empresaParceira;
 	}
 
 	public String getSegmento() {
@@ -66,13 +76,6 @@ public class Cursos {
 		this.menu = menu;
 	}
 
-	public List<CadastroPF> getAlunos() {
-		return alunos;
-	}
-
-	public void setAlunos(List<CadastroPF> alunos) {
-		this.alunos = alunos;
-	}
 
 	public void setProfessora(String professora) {
 		this.professora = professora;
@@ -171,9 +174,8 @@ public class Cursos {
 			
 		}
 		
-		
-			
-				System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
+	//	
+		System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
 	}
 		
 }
