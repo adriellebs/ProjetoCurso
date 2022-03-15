@@ -8,7 +8,7 @@ public class Cursos {
 	
 	Scanner leia = new Scanner(System.in);
 	private String segmento;
-	private String professora;
+	private CadastroPF professora;
 	private String curso;
 	private CadastroPJ empresaParceira;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
@@ -51,11 +51,13 @@ public class Cursos {
 		this.segmento = segmento;
 	}
 
-	public String getProfessora() {
+	
+
+	public CadastroPF getProfessora() {
 		return professora;
 	}
 
-	public void setProfessora() {
+	public void setProfessora(CadastroPF professora) {
 		this.professora = professora;
 	}
 
@@ -76,10 +78,6 @@ public class Cursos {
 		this.menu = menu;
 	}
 
-
-	public void setProfessora(String professora) {
-		this.professora = professora;
-	}
 
 	public void escolherCurso() {
 		
@@ -176,6 +174,15 @@ public class Cursos {
 		
 	//	
 		System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
-	}
 		
+	}
+	
+	public void exibirInformacoesCurso() {
+		System.out.println("Nome do Curso: "+this.curso);
+		System.out.println("Segmento do Curso: "+this.segmento);
+		System.out.println("Professor do Curso"+this.professora.getNome());
+		System.out.println("Empresa Parceira: "+ this.empresaParceira);
+		System.out.println("--------------------------------------------");
+		
+	}
 }

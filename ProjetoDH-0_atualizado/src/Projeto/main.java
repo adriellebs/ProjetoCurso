@@ -7,15 +7,15 @@ public class main {
 	public static void main(String[] args) {
 		int opcaoCadastrar;
 		Scanner leia = new Scanner(System.in);//Criando nosso leitor
-		
+		Cursos cursoEscolhido = new Cursos();
 		Cursos cursoDesign = new Cursos("Design","Tecnologia");
 		Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
 		Cursos cursoDesenvolvimento = new Cursos("Desenvolvimento","Tecnologia");
 		Cursos cursoNeuromarketing = new Cursos("Neuromarketing","Marketing");
 		Cursos cursoMarketingDigital = new Cursos("Marketing Digital","Marketing");
-		Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade Finanças");
-		Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade Finanças");
-		Cursos cursoAnalisedeBalanco = new Cursos("Análise de Balanço","Contabilidade Finanças");
+		Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade e Finanças");
+		Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
+		Cursos cursoAnalisedeBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
 		
 	
 		//Cursos curso = new Cursos();
@@ -102,7 +102,27 @@ public class main {
 					pessoaFisica.setGenero("Outros");
 				}
 				
-				//curso.escolherCurso();
+				
+				//Escolher o curso
+				cursoEscolhido.escolherCurso();
+				
+				if(cursoEscolhido.getCurso() == "Design") {
+					
+				}else if (cursoEscolhido.getCurso() == "Data Science") {
+					cursoEscolhido = cursoDataScience;
+				}else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") {
+					cursoEscolhido = cursoDataScience;
+				}else if(cursoEscolhido.getCurso() == "Neuromarketing") {
+					cursoEscolhido = cursoDataScience;
+				}else if(cursoEscolhido.getCurso() == "Marketing Digital") {
+					cursoEscolhido = cursoDataScience;
+				}else if(cursoEscolhido.getCurso() == "Matemática Financeira") {
+					cursoEscolhido = cursoDataScience;
+				}else if(cursoEscolhido.getCurso() == "Controladoria") {
+					cursoEscolhido = cursoDataScience;
+				}else {
+					cursoEscolhido = cursoControladoria;
+				}
 				
 				//Professor ou Aluno-----------------------------------------------------------------
 				System.out.println("\nVocê é professor ou aluno????");
@@ -117,16 +137,13 @@ public class main {
 				
 				//Validando
 				if(professorOuAluno == 2) {
-					System.out.println("Professor");
+					cursoEscolhido.setProfessora(pessoaFisica);
+					
 				}else {
 					System.out.println("Aluno");
 				}
 				
-				//Conferindo se armazenamos tudo na pessoaFisica
-				//System.out.println(pessoaFisica);
-				
-				
-				
+				cursoEscolhido.exibirInformacoesCurso();
 				
 				
 			}else {
