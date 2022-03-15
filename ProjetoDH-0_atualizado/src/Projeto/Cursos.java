@@ -27,6 +27,11 @@ public class Cursos {
 	public Cursos() {
 		
 	}
+	
+	public Cursos(String nomeCurso, String segmento) {
+		this.curso = nomeCurso;
+		this.segmento = segmento;
+	}
 
 	public String getSegmento() {
 		return segmento;

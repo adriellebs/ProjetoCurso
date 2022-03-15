@@ -7,7 +7,18 @@ public class main {
 	public static void main(String[] args) {
 		int opcaoCadastrar;
 		Scanner leia = new Scanner(System.in);//Criando nosso leitor
-		Cursos curso = new Cursos();
+		
+		Cursos cursoDesign = new Cursos("Design","Tecnologia");
+		Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
+		Cursos cursoDesenvolvimento = new Cursos("Desenvolvimento","Tecnologia");
+		Cursos cursoNeuromarketing = new Cursos("Neuromarketing","Marketing");
+		Cursos cursoMarketingDigital = new Cursos("Marketing Digital","Marketing");
+		Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade Finanças");
+		Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade Finanças");
+		Cursos cursoAnalisedeBalanco = new Cursos("Análise de Balanço","Contabilidade Finanças");
+		
+	
+		//Cursos curso = new Cursos();
 		//Mensagem de boas vindas
 		System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- "
 				+ "\n\t\t--------- Por favor, nos informe o se você é PF ou PJ para iniciar. ------- ");
@@ -91,7 +102,7 @@ public class main {
 					pessoaFisica.setGenero("Outros");
 				}
 				
-				curso.escolherCurso();
+				//curso.escolherCurso();
 				
 				//Professor ou Aluno-----------------------------------------------------------------
 				System.out.println("\nVocê é professor ou aluno????");
@@ -121,7 +132,25 @@ public class main {
 			}else {
 				//Criação do PJ
 				CadastroPJ pessoaJuridica = new CadastroPJ();
-				//Colocar Perguntas Abaixo
+									
+					
+			    System.out.println("Informe o sua razão social abaixo: ");
+				leia.nextLine();
+				String nome = leia.nextLine(); 
+				pessoaJuridica.setNome(nome);
+					
+				System.out.println("Informe seu CNPJ: ");
+				String cnpj = leia.nextLine();
+				pessoaJuridica.setCnpj(cnpj);
+					
+				System.out.println("Informe seu segmento: ");
+				String segmento = leia.nextLine();
+				pessoaJuridica.setSegmento(segmento);
+					
+				System.out.println("Qual segmento de curso deseja parceria: "); 
+					
+				
+				
 				
 				
 			}
