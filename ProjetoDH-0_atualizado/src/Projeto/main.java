@@ -20,6 +20,21 @@ public class main {
 	static Cursos[] todosCursos = {cursoDesign,cursoDataScience,cursoDesenvolvimento,
 			cursoNeuromarketing,cursoMarketingDigital,cursoMatematicaFinanceira,cursoControladoria,cursoAnaliseBalanco}; 
 	
+	
+	static{
+		CadastroPJ portoSeguro = new CadastroPJ("Porto Seguro", "11111111111111", "Seguros");
+		CadastroPJ cocaCola = new CadastroPJ("Coca-Cola", "11111111111111", "Bebidas");
+		CadastroPJ nVidia = new CadastroPJ("NVidia", "11111111111111", "Placas de Vídeo");
+		CadastroPJ contaAzul = new CadastroPJ("Conta Azul", "11111111111111", "Gestão Financeira");
+		
+		cursoDesign.addEmpresaParceira(portoSeguro);
+		cursoDesign.addEmpresaParceira(cocaCola);
+		cursoDataScience.addEmpresaParceira(portoSeguro);
+		cursoDesenvolvimento.addEmpresaParceira(portoSeguro);
+		cursoMatematicaFinanceira.addEmpresaParceira(contaAzul);
+		cursoAnaliseBalanco.addEmpresaParceira(nVidia);
+		
+	}
 	public static void main(String[] args)
 	{
 		
@@ -305,7 +320,9 @@ public class main {
 				//Empresas
 				
 				for(Cursos curso: todosCursos) {
-					System.out.println(curso);
+					for(CadastroPJ empresa : curso.getEmpresasParceiras()) {
+						System.out.println(empresa.getNome()+ " - " + curso.getCurso());
+					}
 					
 				}
 				

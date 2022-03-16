@@ -10,6 +10,21 @@ public abstract class Cadastro {
 	public Cadastro() {
 		
 	}
+	
+
+	public Cadastro(String nome, String endereco, String telefone, String email) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.email = email;
+	}
+
+	
+	public Cadastro(String nome) {
+		super();
+		this.nome = nome;
+	}
 
 
 	public String getNome() {

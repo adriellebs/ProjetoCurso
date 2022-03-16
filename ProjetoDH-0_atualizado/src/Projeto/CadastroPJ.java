@@ -8,11 +8,18 @@ public class CadastroPJ extends Cadastro {
 	private String cnpj;
 	private String segmento;
 	
-	public CadastroPJ() 
+	
+	public CadastroPJ(String nome , String cnpj, String segmento) 
 	{
+		super(nome);
+		this.cnpj = cnpj;
+		this.segmento = segmento;
 		
 	}
-
+	
+	public CadastroPJ() {
+		
+	}
 	public String getCnpj() 
 	{
 		return cnpj;
@@ -43,11 +50,5 @@ public class CadastroPJ extends Cadastro {
 		}
 		
 	}
-
-	@Override
-	public String toString() {
-		return "CadastroPJ [cnpj=" + cnpj + ", segmento=" + segmento + "]";
-	}
-	
 	
 }
