@@ -47,7 +47,7 @@ public class CadastroPF extends Cadastro {
 	public void validarCpf(){
 		Scanner leia = new Scanner(System.in);
 		while (this.getCpf().length() != 11){
-			System.out.println("\nCPF Inválido! Digite seu CPF (sem ponto e vírgula):");
+			System.out.println("\nCPF Inválido! Digite seu CPF (sem ponto e traço):");
 			this.cpf = leia.nextLine();
 		}
 		

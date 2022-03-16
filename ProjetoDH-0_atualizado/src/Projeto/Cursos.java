@@ -12,67 +12,83 @@ public class Cursos {
 	private String curso;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
 	
-	private String menu = "Os segmentos e cursos disponiveis são:\n\n"
-			+ "Tecnologia: \n\tDesign"
-			+ "\n\tData Science\n"
-			+ "\tDesenvolvimento Web\n\n"
-			+ "Marketing:"
-			+ "\n\tNeuromarketing\n"
-			+ "\tMarketing Digital"
-			+ "\n\nContabilidade e Finanças:\n"
-			+ "\tMatemática Financeira\n"
-			+ "\tControladoria\n"
-			+ "\tAnálise de Balanços";
+	private String menu = "Os segmentos e cursos disponiveis são:"
+			+ "\nTecnologia: "
+			+ "\n\tDesign"
+			+ "\n\tData Science"
+			+ "\n\tDesenvolvimento Web"
+			+ "\n\nMarketing:"
+			+ "\n\tNeuromarketing"
+			+ "\n\tMarketing Digital"
+			+ "\n\nContabilidade e Finanças:"
+			+ "\n\tMatemática Financeira"
+			+ "\n\tControladoria"
+			+ "\n\tAnálise de Balanços";
 	
 	
-	public Cursos() {
+	public Cursos() 
+	{
 		
 	}
 	
-	public Cursos(String nomeCurso, String segmento) {
+	public Cursos(String nomeCurso, String segmento) 
+	{
 		this.curso = nomeCurso;
 		this.segmento = segmento;
 	}
 
-	public String getSegmento() {
+	public String getSegmento() 
+	{
 		return segmento;
 	}
 
-	public void setSegmento(String segmento) {
+	public void setSegmento(String segmento)
+	{
 		this.segmento = segmento;
 	}
 
 
-	public String getCurso() {
+	public String getCurso() 
+	{
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(String curso) 
+	{
 		this.curso = curso;
 	}
 	
 	
-	public String getMenu() {
+	public String getMenu() 
+	{
 		return menu;
 	}
 
-	public void setMenu(String menu) {
+	public void setMenu(String menu) 
+	{
 		this.menu = menu;
 	}
 
 
-	public void escolherCurso() {
+	public void escolherCurso() 
+	{
 		
 		System.out.println(this.menu);
 		
 		try {
 			
-			System.out.println("\nDigite o número do segmento de sua escolha: \n1 - Tecnologia\n2 - Marketing\n3 - Contabilidade e Finanças");
+			System.out.println("\nDigite o número do segmento de sua escolha: "
+					+ "\n1 - Tecnologia"
+					+ "\n2 - Marketing"
+					+ "\n3 - Contabilidade e Finanças");
 			int segmento = leia.nextInt();
 			
-			while (segmento < 1 || segmento > 4) {
+			while (segmento < 1 || segmento > 3) {
 				leia.nextLine();
-				System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Tecnologia\n2 - Marketing\n3 - Contabilidade e Finanças");
+				System.out.println("\nOpção inválida. Escolha o seu curso: "
+						+ "\n1 - Tecnologia"
+						+ "\n2 - Marketing"
+						+ "\n3 - Contabilidade e Finanças");
 				segmento = leia.nextInt();
 				
 			}
@@ -80,12 +96,18 @@ public class Cursos {
 			switch(segmento) {
 			case 1:
 				setSegmento("Tecnologia");
-				System.out.println("\nEscolha o seu curso: \n1 - Design\n2 - Data Science\n3 - Desenvolvimento Web");
+				System.out.println("\nEscolha o seu curso: "
+						+ "\n1 - Design"
+						+ "\n2 - Data Science"
+						+ "\n3 - Desenvolvimento Web");
 				int escolha = leia.nextInt();
 			
-				while (escolha < 1 || escolha > 4) {
+				while (escolha < 1 || escolha > 3) {
 					leia.nextLine();
-					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Design \n2 - Data Science \n3 - Desenvolvimento Web");
+					System.out.println("\nOpção inválida. Escolha o seu curso: "
+							+ "\n1 - Design "
+							+ "\n2 - Data Science "
+							+ "\n3 - Desenvolvimento Web");
 					escolha = leia.nextInt();
 						
 				}
@@ -103,12 +125,16 @@ public class Cursos {
 			break;
 			case 2:
 				setSegmento("Marketing");
-				System.out.println("\nEscolha o seu curso: \n1 - Neuromarketing\n2 - Marketing Digital");
+				System.out.println("\nEscolha o seu curso: "
+						+ "\n1 - Neuromarketing"
+						+ "\n2 - Marketing Digital");
 				int escolher = leia.nextInt();
 				
-				while (escolher < 1 || escolher > 4) {
+				while (escolher < 1 || escolher > 2) {
 					leia.nextLine();
-					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Neuromarketing \n2 - Marketing Digital");
+					System.out.println("\nOpção inválida. Escolha o seu curso: "
+							+ "\n1 - Neuromarketing "
+							+ "\n2 - Marketing Digital");
 					escolher = leia.nextInt();
 						
 				}
@@ -123,12 +149,17 @@ public class Cursos {
 			break;
 			case 3:
 				setSegmento("Contabilidade e Finanças");
-				System.out.println("\nEscolha o seu curso: \n1 - Matemática Financeira\n2 - Controladoria\n3 - Análise de balanços");
+				System.out.println("\nEscolha o seu curso: "
+						+ "\n1 - Matemática Financeira"
+						+ "\n2 - Controladoria\n3 - Análise de balanços");
 				int escolh = leia.nextInt();
 				
-				while (escolh < 1 || escolh > 4) {
+				while (escolh < 1 || escolh > 3) {
 					leia.nextLine();
-					System.out.println("\nOpção inválida, Escolha o seu curso: \n1 - Matemática Financeira \n2 - Controladoria \n3 - Análise de balanços");
+					System.out.println("\nOpção inválida. Escolha o seu curso: "
+							+ "\n1 - Matemática Financeira "
+							+ "\n2 - Controladoria "
+							+ "\n3 - Análise de balanços");
 					escolh = leia.nextInt();
 						
 				}
@@ -149,13 +180,14 @@ public class Cursos {
 			
 		}
 			
-		} catch (InputMismatchException e) {
-			System.out.println("Tipo de dado invalido, digite uma opção valida");
+		} catch (InputMismatchException e) 
+		{
+			System.out.println("Tipo de dado invalido, digite o número correspondente ao curso escolhido.");
 			
 		}
 		
 	//	
-		System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
+		System.out.println("\n\nCadastro realizado para o curso " + getCurso() +", do segmento " + getSegmento()+".");
 		
 	}
 	
@@ -163,12 +195,11 @@ public class Cursos {
 		this.empresasParceiras.add(empresa);
 	}
 	
-	public void exibirInformacoesCurso() {
-		System.out.println("Nome do Curso: "+this.curso);
-		System.out.println("Segmento do Curso: "+this.segmento);
-		//System.out.println("Professor do Curso: "+this.professora.getNome());
-		//System.out.println("Empresa Parceira: "+ this.empresaParceira);
-		System.out.println("--------------------------------------------");
-		
+	public void matricularAluno(CadastroPF aluno) 
+	{
+		this.alunos.add(aluno);
 	}
+	
+		
+	
 }

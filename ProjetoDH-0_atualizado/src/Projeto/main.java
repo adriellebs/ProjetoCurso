@@ -16,9 +16,10 @@ public class main {
 	static Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
 	static Cursos cursoAnaliseBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		
-		System.out.println(cursoAnaliseBalanco.getCurso());
+		
 		Scanner leia = new Scanner(System.in);
 		
 		//Mensagem de boas vindas
@@ -26,7 +27,7 @@ public class main {
 	
 		
 		////////////////////////////////MENU PRINCIPAL////////////////////////////////////////////////////////////////////////////////////////
-		System.out.println("1-Criar novo cadastros");
+		System.out.println("1-Criar novo cadastro");
 		System.out.println("2-Visualizar cadastros");
 		System.out.println("3-Sair");
 		int opcaoMenu = leia.nextInt();//Lendo opçoes
@@ -42,21 +43,29 @@ public class main {
 			leia.nextLine();
 		}
 		
-		if(opcaoMenu == 1 ) {
+		if(opcaoMenu == 1 ) 
+		{
 			//////////////CADASTRO PF OU PJ////////////////////////////////////////////////////////////////
 			
 			
 			int opcaoCadastrar;//VARIAVEL PARA LÁ NO FINAL PERGUNTAR SE VC QUER CADASTRAR UMA PESSOA NOVA OU NÃO
-			do{
+			do
+			{
 				
-				//PF OU PJ??????-----------------------------------------------------------------
+				//PF OU PJ-----------------------------------------------------------------
 				
-				System.out.println("1-PF\n2-PJ");
+				System.out.println("\nDigite a opção correspondente:"
+						+ "\n1-Pessoa Física"
+						+ "\n2-Pessoa Jurídica");
 				int opcaoPFPJ = leia.nextInt();//Lendo se é PF ou PJ
 				
 				//Validando PF Ou PJ
-				while(opcaoPFPJ < 1 || opcaoPFPJ > 2) {
-					System.out.println("Opção Inválida, digite 1 para PF ou 2 para PJ");
+				while(opcaoPFPJ < 1 || opcaoPFPJ > 2) 
+				{
+					System.out.println("Opção Inválida!"
+							+ "\nDigite a opção correspondente:"
+							+ "\n1-Pessoa Física"
+							+ "\n2-Pessoa Jurídica");
 					leia.nextLine();//Limpando Scanner
 					opcaoPFPJ  = leia.nextInt();
 					
@@ -64,66 +73,75 @@ public class main {
 				
 				//Se chegou aqui é pq a opção 1 ou 2 está validada
 				
-				if(opcaoPFPJ == 1 ) {
+				if(opcaoPFPJ == 1 ) 
+				{
 					
 					CadastroPF pessoaFisica = new CadastroPF();
 					
 					//Nome-----------------------------------------------------------------
-					System.out.println("Informe o seu nome abaixo: ");
+					System.out.println("Informe o seu nome: ");
 					leia.nextLine();//Limpando Scanner
 					String nome = leia.nextLine(); //Lendo o nome
 					pessoaFisica.setNome(nome);//Atribuindo o nome
 					
 					
 					//Endereco-----------------------------------------------------------------
-					System.out.println("\nQual o seu endereço?");
-					
+					System.out.printf("\nOlá, %s! Informe por gentileza os seus dados: ",nome);
+					System.out.println("\nEndereço: ");		
 					String endereco = leia.nextLine(); // Lendo o endereço
 					pessoaFisica.setEndereco(endereco);//Atribuindo o endereco
 					
 					//Telefone-----------------------------------------------------------------
-					System.out.println("\nInforma pra a gente o seu telefone com ddd: ");
-					
+					System.out.println("\nTelefone para contato com DDD: ");
 					String telefone = leia.nextLine(); // Lendo o telefone
 					pessoaFisica.setTelefone(telefone); //Atribuindo o telefone
 					
-					//EMAIL-----------------------------------------------------------------
-					System.out.println("\nInforma também um endereço de email, por favor? ");
-					
+					//E-MAIL-----------------------------------------------------------------
+					System.out.println("\nSeu melhor e-mail: ");
 					String email = leia.nextLine(); // Lendo o email
 					pessoaFisica.setEmail(email); //Atribuindo o email
 					
 					//CPF-----------------------------------------------------------------
-					System.out.println("\nDigite o seu CPF, por favor? ");
-					
+					System.out.println("\nCPF (sem ponto e traço): ");
 					String cpf = leia.nextLine(); // Lendo o CPF
 					pessoaFisica.setCpf(cpf); //Atribuindo o CPF
 					pessoaFisica.validarCpf(); //Validando CPF
 					
 					//Data de Nascimento-----------------------------------------------------------------
-					System.out.println("\nDigite a sua data de nascimento, por favor? ");
-					
+					System.out.println("\nSua data de nascimento: ");					
 					String dataNascimento = leia.nextLine(); // Lendo a Data de Nascimento
 					pessoaFisica.setNascimento(dataNascimento);//Atribuindo a data de nascimento 
 					
 					//Genero-----------------------------------------------------------------
-					System.out.println("\nDigite o seu genero, por favor? ");
-					System.out.println("1- Feminino 2 - Masculino 3 - Outros");
+					System.out.println("\nDigite a opção correspondente ao seu gênero, por favor: ");
+					System.out.println("\n1- Feminino "
+									 + "\n2 - Masculino "
+									 + "\n3 - Outros");
 					
 					int opcaoGenero = leia.nextInt(); //Lendo a opção para o genero
-					while(opcaoGenero < 1 || opcaoGenero > 3 ) {
-						System.out.println("Opcao inválida, digite 1 para Feminino 2 para Masculino ou 3 para Outros");
+					while(opcaoGenero < 1 || opcaoGenero > 3 ) 
+					{
+						System.out.println("Opcao inválida! Digite a opção correspondente"
+								+ " ao seu gênero, por favor:"
+								+ "\n1- Feminino "
+								+ "\n2 - Masculino"
+								+ "\n3 - Outros");
 						leia.nextLine();//Limpando Scanner
 						opcaoGenero = leia.nextInt(); //Pedindo para a pessoa digitar novamente
 					}
 					leia.nextLine();//Limpando Scanner, só limpa ele depois de um nextInt
 					
 					//Apos Validar a opção
-					if(opcaoGenero == 1) {
+					if(opcaoGenero == 1) 
+					{
 						pessoaFisica.setGenero("Feminino");
-					}else if (opcaoGenero ==2) {
+					}
+					else if (opcaoGenero ==2) 
+					{
 						pessoaFisica.setGenero("Masculino");
-					}else {
+					}
+					else 
+					{
 						pessoaFisica.setGenero("Outros");
 					}
 					
@@ -131,124 +149,124 @@ public class main {
 					//Escolher o curso
 					cursoEscolhido.escolherCurso();
 					
-					if(cursoEscolhido.getCurso() == "Design") {
+					if(cursoEscolhido.getCurso() == "Design") 
+					{
 						
-					}else if (cursoEscolhido.getCurso() == "Data Science") {
+					}
+					else if (cursoEscolhido.getCurso() == "Data Science") 
+					{
 						cursoEscolhido = cursoDataScience;
-					}else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") {
+					}
+					else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") 
+					{
 						cursoEscolhido = cursoDesenvolvimento;
-					}else if(cursoEscolhido.getCurso() == "Neuromarketing") {
+					}
+					else if(cursoEscolhido.getCurso() == "Neuromarketing") 
+					{
 						cursoEscolhido = cursoNeuromarketing;
-					}else if(cursoEscolhido.getCurso() == "Marketing Digital") {
+					}
+					else if(cursoEscolhido.getCurso() == "Marketing Digital") 
+					{
 						cursoEscolhido = cursoMarketingDigital;
-					}else if(cursoEscolhido.getCurso() == "Matemática Financeira") {
+					}
+					else if(cursoEscolhido.getCurso() == "Matemática Financeira") 
+					{
 						cursoEscolhido = cursoMatematicaFinanceira;
-					}else if(cursoEscolhido.getCurso() == "Controladoria") {
+					}
+					else if(cursoEscolhido.getCurso() == "Controladoria") 
+					{
 						cursoEscolhido = cursoControladoria;
-					}else {
+					}
+					else 
+					{
 						cursoEscolhido = cursoAnaliseBalanco;
 					}
-					
-					
+					cursoEscolhido.matricularAluno(pessoaFisica); //para vincular o cadastro realizado à lista de alunos matriculados
 					
 				
-				}else {
+					}
+					else
+					{
 					//Criação do PJ
 					CadastroPJ pessoaJuridica = new CadastroPJ();
 					
 					
-					System.out.println("Informe o sua razão social abaixo: ");
+					System.out.println("Informe o nome da empresa: ");
 					leia.nextLine();
 					String nome = leia.nextLine(); 
 					pessoaJuridica.setNome(nome);
 					
-					System.out.println("Informe seu CNPJ: ");
+					System.out.println("Olá,"+nome+ "! Informe por gentileza:"
+							+ "\nCNPJ (sem ponto e traço): ");
 					String cnpj = leia.nextLine();
 					pessoaJuridica.setCnpj(cnpj);
 					
-					System.out.println("Informe seu segmento: ");
+					System.out.println("Segmento da empresa: ");
 					String segmento = leia.nextLine();
 					pessoaJuridica.setSegmento(segmento);
 					
 					//Escolher curso
 					System.out.println("Qual curso deseja parceria?");  
-					System.out.println("1 - "+cursoDesign.getCurso() + " Segmento: "+cursoDesign.getSegmento());
-					System.out.println("2 - "+cursoDataScience.getCurso() + " Segmento: "+cursoDataScience.getSegmento());
-					System.out.println("3 - "+cursoDesenvolvimento.getCurso() + " Segmento: "+cursoDesenvolvimento.getSegmento());
-					System.out.println("4 - "+cursoNeuromarketing.getCurso() + " Segmento: "+cursoNeuromarketing.getSegmento());
-					System.out.println("5 - "+cursoMarketingDigital.getCurso() + " egmento: "+cursoMarketingDigital.getSegmento());
-					System.out.println("6 - "+cursoMatematicaFinanceira.getCurso() + " Segmento: "+cursoMatematicaFinanceira.getSegmento());
-					System.out.println("7 - "+cursoControladoria.getCurso() + " Segmento: "+cursoControladoria.getSegmento());
-					System.out.println("8 - "+cursoAnaliseBalanco + " Segmento: "+cursoAnaliseBalanco.getSegmento());
 					
-					int opcaoCurso = leia.nextInt();
-					leia.nextLine();
-					//Validando opção curso
-					while(opcaoCurso < 1 || opcaoCurso> 8) {
-						System.out.println("Qual curso deseja parceria?");  
-						System.out.println("1 - "+cursoDesign.getCurso() + " Segmento: "+cursoDesign.getSegmento());
-						System.out.println("2 - "+cursoDataScience.getCurso() + " Segmento: "+cursoDataScience.getSegmento());
-						System.out.println("3 - "+cursoDesenvolvimento.getCurso() + " Segmento: "+cursoDesenvolvimento.getSegmento());
-						System.out.println("4 - "+cursoNeuromarketing.getCurso() + " Segmento: "+cursoNeuromarketing.getSegmento());
-						System.out.println("5 - "+cursoMarketingDigital.getCurso() + " Segmento: "+cursoMarketingDigital.getSegmento());
-						System.out.println("6 - "+cursoMatematicaFinanceira.getCurso() + " Segmento: "+cursoMatematicaFinanceira.getSegmento());
-						System.out.println("7 - "+cursoControladoria.getCurso() + " Segmento: "+cursoControladoria.getSegmento());
-						System.out.println("8 - "+cursoAnaliseBalanco.getCurso() + "\t Segmento: "+cursoAnaliseBalanco.getSegmento());
-						opcaoCurso = leia.nextInt();
-						leia.nextLine();
-					}
+					cursoEscolhido.escolherCurso();
 					
-					
-					switch(opcaoCurso) {
+					if(cursoEscolhido.getCurso() == "Design") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
 						
-						case 1:
-							cursoDesign.addEmpresaParceira(pessoaJuridica);
-							break;
-							
-						case 2:
-							cursoDataScience.addEmpresaParceira(pessoaJuridica);
-							
-							break;
-							
-						case 3:
-							cursoDesenvolvimento.addEmpresaParceira(pessoaJuridica);
-							break;
-							
-						case 4:
-							cursoNeuromarketing.addEmpresaParceira(pessoaJuridica);
-							break;
-							
-						case 5:
-							cursoMarketingDigital.addEmpresaParceira(pessoaJuridica);
-							
-							break;
-							
-						case 6:
-							cursoMatematicaFinanceira.addEmpresaParceira(pessoaJuridica);
-							break;
-							
-						case 7:
-							cursoControladoria.addEmpresaParceira(pessoaJuridica);
-							break;
-							
-						case 8:
-							cursoAnaliseBalanco.addEmpresaParceira(pessoaJuridica);
-							break;
-					
 					}
-					
-				
+					else if (cursoEscolhido.getCurso() == "Data Science") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else if(cursoEscolhido.getCurso() == "Neuromarketing") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else if(cursoEscolhido.getCurso() == "Marketing Digital") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else if(cursoEscolhido.getCurso() == "Matemática Financeira") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else if(cursoEscolhido.getCurso() == "Controladoria") 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+						
+					}
+					else 
+					{
+						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
+					}			
 					
 				}
+					
+						
 				System.out.println("---------CADASTRADO COM SUCESSO--------------");
 				//Deseja Cadastrar uma nova pessoa????
 				System.out.println("\n---------------------------------------------------------");
-				System.out.println("Deseja cadastrar uma nova pessoa?");
-				System.out.println("1 - Sim\n 2 - Não");
+				System.out.println("Deseja realizar um novo cadastro?");
+				System.out.println("1 - Sim"
+							  + "\n2 - Não");
 				
 				opcaoCadastrar = leia.nextInt();
-				while(opcaoCadastrar < 0 || opcaoCadastrar > 2) {
-					System.out.println("Opção Inválida, digite 1 para sim ou 2 para não");
+				while(opcaoCadastrar < 1 || opcaoCadastrar > 2) 
+				{
+					System.out.println("Opção Inválida, digite a opção correspondente a sua escolha. "
+							+ "Deseja realizar um novo cadastro?"
+							+ "\n1 - Sim"
+							+ "\n2 - Não");
 					leia.nextLine();
 					opcaoCadastrar = leia.nextInt();
 				}
@@ -260,7 +278,9 @@ public class main {
 			main.main(arg);
 			
 			
-		}else if (opcaoMenu == 2) {
+		}
+		else if (opcaoMenu == 2) 
+		{
 			//////////////VISUALIZAÇÃO////////////////////////////////////////////////////////////////
 			
 			System.out.println("1-Visualizar Alunos");
@@ -272,8 +292,10 @@ public class main {
 			String arg [] = {};
 			main.main(arg);
 			
-		}else {
-			System.out.println("Tchaaaau muito obrigado....");
+		}
+		else 
+		{
+			System.out.println("Obrigado por utilizar nosso sistema!");
 		}
 		
 		
