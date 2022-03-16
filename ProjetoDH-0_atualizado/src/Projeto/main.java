@@ -18,7 +18,8 @@ public class main {
 	static Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
 	static Cursos cursoAnaliseBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
 	static Cursos[] todosCursos = {cursoDesign,cursoDataScience,cursoDesenvolvimento,
-			cursoNeuromarketing,cursoMarketingDigital,cursoMatematicaFinanceira,cursoControladoria,cursoAnaliseBalanco}; 
+			cursoNeuromarketing,cursoMarketingDigital,cursoMatematicaFinanceira,cursoControladoria,cursoAnaliseBalanco};
+	static int contadorMenuPrincipal = 0;
 	
 	//Bloco de inicialização da classe
 	static{
@@ -78,7 +79,10 @@ public class main {
 		Scanner leia = new Scanner(System.in);
 		
 		//Mensagem de boas vindas
-		System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- ");
+		if(contadorMenuPrincipal==0) {
+			
+			System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- ");
+		}
 	
 		
 		////////////////////////////////MENU PRINCIPAL////////////////////////////////////////////////////////////////////////////////////////
@@ -323,9 +327,9 @@ public class main {
 			} while(opcaoCadastrar != 2);
 			
 			////////////////////////VOLTANDO PRO MENU////////////////////////////////////////////////////////////
+			contadorMenuPrincipal++;
 			String arg [] = {};
 			main.main(arg);
-			
 			
 		}
 		else if (opcaoMenu == 2) 
@@ -360,7 +364,7 @@ public class main {
 					System.out.println("-----------------Fim lista de alunos---------------------------");
 				}else {
 					//Empresas
-					System.out.println("----------------Lista de empresas que desejam parceirias--------");
+					System.out.println("----------------Lista de empresas que desejam parcerias--------");
 					for(Cursos curso: todosCursos) {
 						for(CadastroPJ empresa : curso.getEmpresasParceiras()) {
 							System.out.println(empresa.getNome()+ " - " + curso.getCurso());
@@ -374,9 +378,9 @@ public class main {
 			
 			
 			////////////////////////VOLTANDO PRO MENU////////////////////////////////////////////////////////////
+			contadorMenuPrincipal++;
 			String arg [] = {};
 			main.main(arg);
-			
 		}
 		else 
 		{
