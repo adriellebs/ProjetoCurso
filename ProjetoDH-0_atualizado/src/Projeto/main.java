@@ -23,7 +23,7 @@ public class main {
 	
 	//Bloco de inicialização da classe
 	static{
-		//PJ/////////////////////////////////////////////////////////////////////////////////////
+		//PJ/////////////////s////////////////////////////////////////////////////////////////////
 		CadastroPJ portoSeguro = new CadastroPJ("Porto Seguro", "11111111111111", "Seguros");
 		CadastroPJ cocaCola = new CadastroPJ("Coca-Cola", "11111111111111", "Bebidas");
 		CadastroPJ nVidia = new CadastroPJ("NVidia", "11111111111111", "Placas de Vídeo");
