@@ -300,10 +300,10 @@ public class main {
 					{
 						cursoEscolhido = cursoControladoria;
 					}
-					else 
+					else
 					{
 						cursoEscolhido = cursoAnaliseBalanco;
-					}	
+					}
 					cursoEscolhido.addEmpresaParceira(pessoaJuridica);
 					
 				}

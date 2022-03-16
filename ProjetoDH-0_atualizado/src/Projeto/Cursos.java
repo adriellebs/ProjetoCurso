@@ -76,7 +76,7 @@ public class Cursos {
 	{
 		
 		System.out.println(this.menu);
-		leia.nextLine();
+		
 		try {
 			
 			System.out.println("\nDigite o número do segmento de sua escolha: "
@@ -120,7 +120,7 @@ public class Cursos {
 					setCurso("Design");
 				break;
 				case 2:
-					setCurso("Data Sciece");
+					setCurso("Data Science");
 				break;
 				case 3:
 					setCurso("Desenvolvimento Web");
