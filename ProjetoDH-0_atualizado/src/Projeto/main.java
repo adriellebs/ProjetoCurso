@@ -8,7 +8,7 @@ public class main {
 	/////INSTANCIANDO/CRIANDO OBJETOS ESTÁTICOS DE CLASSE ////////////////////////////////////////////////////////////////////////
 	
 	//Cadastrando os Cursos de forma ESTÁTICA
-	static Cursos cursoEscolhido = new Cursos();
+	
 	static Cursos cursoDesign = new Cursos("Design","Tecnologia");
 	static Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
 	static Cursos cursoDesenvolvimento = new Cursos("Desenvolvimento","Tecnologia");
@@ -82,6 +82,10 @@ public class main {
 		if(contadorMenuPrincipal==0) {
 			
 			System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- ");
+			System.out.println("\n\t\t----------- MENU PRINCIPAL ----------- ");
+		}else {
+			System.out.println("\n\t\t----------- MENU PRINCIPAL ----------- ");
+			
 		}
 	
 		
@@ -134,7 +138,7 @@ public class main {
 				
 				if(opcaoPFPJ == 1 ) 
 				{
-					
+					Cursos cursoEscolhido = new Cursos();
 					CadastroPF pessoaFisica = new CadastroPF();
 					
 					//Nome-----------------------------------------------------------------
@@ -247,6 +251,7 @@ public class main {
 					else
 					{
 					//Criação do PJ
+					Cursos cursoEscolhido = new Cursos();
 					CadastroPJ pessoaJuridica = new CadastroPJ();
 					
 					
@@ -357,7 +362,7 @@ public class main {
 					System.out.println("----------------Lista de alunos matriculados------------------");
 					for(Cursos curso: todosCursos) {
 						for(CadastroPF aluno: curso.getAlunos()) {
-							System.out.println(aluno.getNome() +" - "+ curso.getSegmento());
+							System.out.println(aluno.getNome() +" - "+ curso.getCurso());
 						}
 					}
 					
