@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Cursos {
-	
+	//private CadastroPF professora;
 	Scanner leia = new Scanner(System.in);
 	private String segmento;
-	private CadastroPF professora;
+	//private CadastroPJ empresaParceira;	
 	private String curso;
-	private CadastroPJ empresaParceira;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
+	
 	private String menu = "Os segmentos e cursos disponiveis são:\n\n"
 			+ "Tecnologia: \n\tDesign"
 			+ "\n\tData Science\n"
@@ -34,7 +34,7 @@ public class Cursos {
 		this.segmento = segmento;
 	}
 
-	
+	/*
 	public CadastroPJ getEmpresaParceira() {
 		return empresaParceira;
 	}
@@ -42,7 +42,7 @@ public class Cursos {
 	public void setEmpresaParceira(CadastroPJ empresaParceira) {
 		this.empresaParceira = empresaParceira;
 	}
-
+	 */
 	public String getSegmento() {
 		return segmento;
 	}
@@ -51,15 +51,6 @@ public class Cursos {
 		this.segmento = segmento;
 	}
 
-	
-
-	public CadastroPF getProfessora() {
-		return professora;
-	}
-
-	public void setProfessora(CadastroPF professora) {
-		this.professora = professora;
-	}
 
 	public String getCurso() {
 		return curso;
@@ -180,8 +171,8 @@ public class Cursos {
 	public void exibirInformacoesCurso() {
 		System.out.println("Nome do Curso: "+this.curso);
 		System.out.println("Segmento do Curso: "+this.segmento);
-		System.out.println("Professor do Curso"+this.professora.getNome());
-		System.out.println("Empresa Parceira: "+ this.empresaParceira);
+		//System.out.println("Professor do Curso: "+this.professora.getNome());
+		//System.out.println("Empresa Parceira: "+ this.empresaParceira);
 		System.out.println("--------------------------------------------");
 		
 	}
