@@ -43,4 +43,11 @@ public class CadastroPJ extends Cadastro {
 		}
 		
 	}
+
+	@Override
+	public String toString() {
+		return "CadastroPJ [cnpj=" + cnpj + ", segmento=" + segmento + "]";
+	}
+	
+	
 }

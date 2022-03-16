@@ -1,5 +1,7 @@
 package Projeto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class main {
@@ -15,6 +17,8 @@ public class main {
 	static Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade e Finanças");
 	static Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
 	static Cursos cursoAnaliseBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
+	static Cursos[] todosCursos = {cursoDesign,cursoDataScience,cursoDesenvolvimento,
+			cursoNeuromarketing,cursoMarketingDigital,cursoMatematicaFinanceira,cursoControladoria,cursoAnaliseBalanco}; 
 	
 	public static void main(String[] args)
 	{
@@ -151,7 +155,7 @@ public class main {
 					
 					if(cursoEscolhido.getCurso() == "Design") 
 					{
-						
+						cursoEscolhido = cursoDesign;
 					}
 					else if (cursoEscolhido.getCurso() == "Data Science") 
 					{
@@ -212,43 +216,37 @@ public class main {
 					
 					if(cursoEscolhido.getCurso() == "Design") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoDesign;
 					}
 					else if (cursoEscolhido.getCurso() == "Data Science") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoDataScience;
 					}
 					else if(cursoEscolhido.getCurso() == "Desenvolvimento Web") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoDesenvolvimento;
 					}
 					else if(cursoEscolhido.getCurso() == "Neuromarketing") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoNeuromarketing;
 					}
 					else if(cursoEscolhido.getCurso() == "Marketing Digital") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoMarketingDigital;
 					}
 					else if(cursoEscolhido.getCurso() == "Matemática Financeira") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoMatematicaFinanceira;
 					}
 					else if(cursoEscolhido.getCurso() == "Controladoria") 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-						
+						cursoEscolhido = cursoControladoria;
 					}
 					else 
 					{
-						cursoEscolhido.addEmpresaParceira(pessoaJuridica);
-					}			
+						cursoEscolhido = cursoAnaliseBalanco;
+					}	
+					cursoEscolhido.addEmpresaParceira(pessoaJuridica);
 					
 				}
 					
@@ -286,6 +284,33 @@ public class main {
 			System.out.println("1-Visualizar Alunos");
 			System.out.println("2-Visualizar Empresas");
 			
+			int opcaoAlunoEmpresa = leia.nextInt();
+			leia.nextLine();
+			
+			while(opcaoAlunoEmpresa < 1 || opcaoAlunoEmpresa> 2) {
+				System.out.println("Opção Inválida, digite 1 ou 2");
+				System.out.println("1-Visualizar Alunos");
+				System.out.println("2-Visualizar Empresas");
+				opcaoAlunoEmpresa = leia.nextInt();	
+				leia.nextLine();
+			}
+			
+			if(opcaoAlunoEmpresa == 1) {
+				//Alunos
+				System.out.println("teste");
+				
+				
+				
+			}else {
+				//Empresas
+				
+				for(Cursos curso: todosCursos) {
+					System.out.println(curso);
+					
+				}
+				
+				
+			}
 			
 			
 			////////////////////////VOLTANDO PRO MENU////////////////////////////////////////////////////////////

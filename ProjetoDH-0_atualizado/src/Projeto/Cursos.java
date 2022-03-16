@@ -195,11 +195,30 @@ public class Cursos {
 		this.empresasParceiras.add(empresa);
 	}
 	
+	public List<CadastroPF> getAlunos() {
+		return alunos;
+	}
+
+	public void setAlunos(List<CadastroPF> alunos) {
+		this.alunos = alunos;
+	}
+
+	public List<CadastroPJ> getEmpresasParceiras() {
+		return empresasParceiras;
+	}
+
 	public void matricularAluno(CadastroPF aluno) 
 	{
 		this.alunos.add(aluno);
 	}
+
+	@Override
+	public String toString() {
+		return "Cursos [segmento=" + segmento + ", empresasParceiras=" + empresasParceiras + ", curso=" + curso
+				+ ", alunos=" + alunos ;
+	}
 	
-		
+	
+	
 	
 }
