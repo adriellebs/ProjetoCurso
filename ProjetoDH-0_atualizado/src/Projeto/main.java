@@ -3,25 +3,23 @@ package Projeto;
 import java.util.Scanner;
 
 public class main {
-
+	/////INSTANCIANDO/CRIANDO OBJETOS ////////////////////////////////////////////////////////////////////////
+	
+	//Cadastrando os Cursos
+	static Cursos cursoEscolhido = new Cursos();
+	static Cursos cursoDesign = new Cursos("Design","Tecnologia");
+	static Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
+	static Cursos cursoDesenvolvimento = new Cursos("Desenvolvimento","Tecnologia");
+	static Cursos cursoNeuromarketing = new Cursos("Neuromarketing","Marketing");
+	static Cursos cursoMarketingDigital = new Cursos("Marketing Digital","Marketing");
+	static Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade e Finanças");
+	static Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
+	static Cursos cursoAnaliseBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
+	
 	public static void main(String[] args) {
 		
-		
-		/////INSTANCIANDO/CRIANDO OBJETOS ////////////////////////////////////////////////////////////////////////
+		System.out.println(cursoAnaliseBalanco.getCurso());
 		Scanner leia = new Scanner(System.in);
-		//Cadastrando os cursos
-		Cursos cursoEscolhido = new Cursos();
-		Cursos cursoDesign = new Cursos("Design","Tecnologia");
-		Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
-		Cursos cursoDesenvolvimento = new Cursos("Desenvolvimento","Tecnologia");
-		Cursos cursoNeuromarketing = new Cursos("Neuromarketing","Marketing");
-		Cursos cursoMarketingDigital = new Cursos("Marketing Digital","Marketing");
-		Cursos cursoMatematicaFinanceira = new Cursos("Matemática","Contabilidade e Finanças");
-		Cursos cursoControladoria = new Cursos("Controladoria","Contabilidade e Finanças");
-		Cursos cursoAnalisedeBalanco = new Cursos("Análise de Balanço","Contabilidade e Finanças");
-		
-	
-		
 		
 		//Mensagem de boas vindas
 		System.out.println("\n\t\t----------- Seja bem-vindo(a) a Digital House Brasil! ----------- ");
@@ -45,15 +43,17 @@ public class main {
 		}
 		
 		if(opcaoMenu == 1 ) {
+			//////////////CADASTRO PF OU PJ////////////////////////////////////////////////////////////////
+			
 			
 			int opcaoCadastrar;//VARIAVEL PARA LÁ NO FINAL PERGUNTAR SE VC QUER CADASTRAR UMA PESSOA NOVA OU NÃO
-			
 			do{
 				
 				//PF OU PJ??????-----------------------------------------------------------------
 				
 				System.out.println("1-PF\n2-PJ");
 				int opcaoPFPJ = leia.nextInt();//Lendo se é PF ou PJ
+				
 				//Validando PF Ou PJ
 				while(opcaoPFPJ < 1 || opcaoPFPJ > 2) {
 					System.out.println("Opção Inválida, digite 1 para PF ou 2 para PJ");
@@ -146,11 +146,10 @@ public class main {
 					}else if(cursoEscolhido.getCurso() == "Controladoria") {
 						cursoEscolhido = cursoControladoria;
 					}else {
-						cursoEscolhido = cursoAnalisedeBalanco;
+						cursoEscolhido = cursoAnaliseBalanco;
 					}
 					
-					System.out.println("CADASTRADO COM SUCESSO");
-					cursoEscolhido.exibirInformacoesCurso();
+					
 					
 				
 				}else {
@@ -171,14 +170,77 @@ public class main {
 					String segmento = leia.nextLine();
 					pessoaJuridica.setSegmento(segmento);
 					
-					System.out.println("Qual segmento de curso deseja parceria: "); 
+					//Escolher curso
+					System.out.println("Qual curso deseja parceria?");  
+					System.out.println("1 - "+cursoDesign.getCurso() + " Segmento: "+cursoDesign.getSegmento());
+					System.out.println("2 - "+cursoDataScience.getCurso() + " Segmento: "+cursoDataScience.getSegmento());
+					System.out.println("3 - "+cursoDesenvolvimento.getCurso() + " Segmento: "+cursoDesenvolvimento.getSegmento());
+					System.out.println("4 - "+cursoNeuromarketing.getCurso() + " Segmento: "+cursoNeuromarketing.getSegmento());
+					System.out.println("5 - "+cursoMarketingDigital.getCurso() + " egmento: "+cursoMarketingDigital.getSegmento());
+					System.out.println("6 - "+cursoMatematicaFinanceira.getCurso() + " Segmento: "+cursoMatematicaFinanceira.getSegmento());
+					System.out.println("7 - "+cursoControladoria.getCurso() + " Segmento: "+cursoControladoria.getSegmento());
+					System.out.println("8 - "+cursoAnaliseBalanco + " Segmento: "+cursoAnaliseBalanco.getSegmento());
+					
+					int opcaoCurso = leia.nextInt();
+					leia.nextLine();
+					//Validando opção curso
+					while(opcaoCurso < 1 || opcaoCurso> 8) {
+						System.out.println("Qual curso deseja parceria?");  
+						System.out.println("1 - "+cursoDesign.getCurso() + " Segmento: "+cursoDesign.getSegmento());
+						System.out.println("2 - "+cursoDataScience.getCurso() + " Segmento: "+cursoDataScience.getSegmento());
+						System.out.println("3 - "+cursoDesenvolvimento.getCurso() + " Segmento: "+cursoDesenvolvimento.getSegmento());
+						System.out.println("4 - "+cursoNeuromarketing.getCurso() + " Segmento: "+cursoNeuromarketing.getSegmento());
+						System.out.println("5 - "+cursoMarketingDigital.getCurso() + " Segmento: "+cursoMarketingDigital.getSegmento());
+						System.out.println("6 - "+cursoMatematicaFinanceira.getCurso() + " Segmento: "+cursoMatematicaFinanceira.getSegmento());
+						System.out.println("7 - "+cursoControladoria.getCurso() + " Segmento: "+cursoControladoria.getSegmento());
+						System.out.println("8 - "+cursoAnaliseBalanco.getCurso() + "\t Segmento: "+cursoAnaliseBalanco.getSegmento());
+						opcaoCurso = leia.nextInt();
+						leia.nextLine();
+					}
 					
 					
+					switch(opcaoCurso) {
+						
+						case 1:
+							cursoDesign.addEmpresaParceira(pessoaJuridica);
+							break;
+							
+						case 2:
+							cursoDataScience.addEmpresaParceira(pessoaJuridica);
+							
+							break;
+							
+						case 3:
+							cursoDesenvolvimento.addEmpresaParceira(pessoaJuridica);
+							break;
+							
+						case 4:
+							cursoNeuromarketing.addEmpresaParceira(pessoaJuridica);
+							break;
+							
+						case 5:
+							cursoMarketingDigital.addEmpresaParceira(pessoaJuridica);
+							
+							break;
+							
+						case 6:
+							cursoMatematicaFinanceira.addEmpresaParceira(pessoaJuridica);
+							break;
+							
+						case 7:
+							cursoControladoria.addEmpresaParceira(pessoaJuridica);
+							break;
+							
+						case 8:
+							cursoAnaliseBalanco.addEmpresaParceira(pessoaJuridica);
+							break;
 					
+					}
 					
+				
 					
 				}
-				
+				System.out.println("---------CADASTRADO COM SUCESSO--------------");
 				//Deseja Cadastrar uma nova pessoa????
 				System.out.println("\n---------------------------------------------------------");
 				System.out.println("Deseja cadastrar uma nova pessoa?");
@@ -199,7 +261,12 @@ public class main {
 			
 			
 		}else if (opcaoMenu == 2) {
-			System.out.println("Opção 2");
+			//////////////VISUALIZAÇÃO////////////////////////////////////////////////////////////////
+			
+			System.out.println("1-Visualizar Alunos");
+			System.out.println("2-Visualizar Empresas");
+			
+			
 			
 			////////////////////////VOLTANDO PRO MENU////////////////////////////////////////////////////////////
 			String arg [] = {};

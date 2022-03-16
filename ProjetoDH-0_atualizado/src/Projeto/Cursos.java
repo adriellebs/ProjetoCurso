@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Cursos {
-	//private CadastroPF professora;
+
 	Scanner leia = new Scanner(System.in);
 	private String segmento;
-	//private CadastroPJ empresaParceira;	
+	private List<CadastroPJ> empresasParceiras = new ArrayList<CadastroPJ>();	
 	private String curso;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
 	
@@ -34,15 +34,6 @@ public class Cursos {
 		this.segmento = segmento;
 	}
 
-	/*
-	public CadastroPJ getEmpresaParceira() {
-		return empresaParceira;
-	}
-
-	public void setEmpresaParceira(CadastroPJ empresaParceira) {
-		this.empresaParceira = empresaParceira;
-	}
-	 */
 	public String getSegmento() {
 		return segmento;
 	}
@@ -166,6 +157,10 @@ public class Cursos {
 	//	
 		System.out.println("\n\nVocê escolheu o curso: " + getCurso() +", do segmento: " + getSegmento());
 		
+	}
+	
+	public void addEmpresaParceira(CadastroPJ empresa) {
+		this.empresasParceiras.add(empresa);
 	}
 	
 	public void exibirInformacoesCurso() {
