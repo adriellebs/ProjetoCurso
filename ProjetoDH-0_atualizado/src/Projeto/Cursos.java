@@ -7,11 +7,12 @@ import java.util.Scanner;
 public class Cursos {
 
 	Scanner leia = new Scanner(System.in);
+	
+	//ATRIBUTOS///////////////////////////////////////////
 	private String segmento;
 	private List<CadastroPJ> empresasParceiras = new ArrayList<CadastroPJ>();	
 	private String curso;
 	private List<CadastroPF> alunos = new ArrayList<CadastroPF>();
-	
 	private String menu = "Os segmentos e cursos disponiveis são:"
 			+ "\nTecnologia: "
 			+ "\n\tDesign"
@@ -25,7 +26,7 @@ public class Cursos {
 			+ "\n\tControladoria"
 			+ "\n\tAnálise de Balanços";
 	
-	
+	//CONSTRUTORES////////////////////////////////////////////////////////////////////////////////
 	public Cursos() 
 	{
 		
@@ -37,6 +38,7 @@ public class Cursos {
 		this.segmento = segmento;
 	}
 
+	//GETTERS AND SETTERS////////////////////////////////////////////////////////////////////////////////
 	public String getSegmento() 
 	{
 		return segmento;
@@ -69,7 +71,7 @@ public class Cursos {
 		this.menu = menu;
 	}
 
-
+	//OUTRAS FUNÇÕES///////////////////////////////////////////////////////////////////////////////////////////////
 	public void escolherCurso() 
 	{
 		

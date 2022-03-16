@@ -3,15 +3,35 @@ package Projeto;
 import java.util.Scanner;
 
 public class CadastroPF extends Cadastro {
-	
+	//ATRIBUTOS DE CLASSE
 	private String cpf;
 	private String nascimento;
 	private String genero;
 	
+	//Constructores////////////////////////////////////////////////////////////////////
 	public CadastroPF() {
 		super();
 	}
 
+	public CadastroPF(String cpf, String nascimento, String genero) {
+		super();
+		this.cpf = cpf;
+		this.nascimento = nascimento;
+		this.genero = genero;
+	}
+	
+	public CadastroPF(String nome,String cpf, String nascimento, String genero) {
+		super(nome);
+		this.cpf = cpf;
+		this.nascimento = nascimento;
+		this.genero = genero;
+	}
+	public CadastroPF(String nome) {
+		super(nome);
+	}
+
+	
+	//GETTER AND SETTERS///////////////////////////////////////////////////////////////////
 	public String getCpf() {
 		return cpf;
 	}
@@ -35,14 +55,8 @@ public class CadastroPF extends Cadastro {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-
-	@Override
-	public String toString() {
-		return "Nome:" + this.nome +" Endereco: " +this.endereco
-				+ " Telefone: "+this.telefone +"Email: " + this.email 
-				+"\n CPF: "+this.cpf+" Genero: "+this.genero+" Nascimento: "+this.nascimento;
-				
-	}
+	
+	//////////////////////// Outras funções
 	
 	public void validarCpf(){
 		Scanner leia = new Scanner(System.in);

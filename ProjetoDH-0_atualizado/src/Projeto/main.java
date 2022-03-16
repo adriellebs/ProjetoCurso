@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class main {
-	/////INSTANCIANDO/CRIANDO OBJETOS ////////////////////////////////////////////////////////////////////////
+	/////INSTANCIANDO/CRIANDO OBJETOS ESTÁTICOS DE CLASSE ////////////////////////////////////////////////////////////////////////
 	
-	//Cadastrando os Cursos
+	//Cadastrando os Cursos de forma ESTÁTICA
 	static Cursos cursoEscolhido = new Cursos();
 	static Cursos cursoDesign = new Cursos("Design","Tecnologia");
 	static Cursos cursoDataScience = new Cursos("Data Science","Tecnologia");
@@ -20,21 +20,57 @@ public class main {
 	static Cursos[] todosCursos = {cursoDesign,cursoDataScience,cursoDesenvolvimento,
 			cursoNeuromarketing,cursoMarketingDigital,cursoMatematicaFinanceira,cursoControladoria,cursoAnaliseBalanco}; 
 	
-	
+	//Bloco de inicialização da classe
 	static{
+		//PJ/////////////////////////////////////////////////////////////////////////////////////
 		CadastroPJ portoSeguro = new CadastroPJ("Porto Seguro", "11111111111111", "Seguros");
 		CadastroPJ cocaCola = new CadastroPJ("Coca-Cola", "11111111111111", "Bebidas");
 		CadastroPJ nVidia = new CadastroPJ("NVidia", "11111111111111", "Placas de Vídeo");
 		CadastroPJ contaAzul = new CadastroPJ("Conta Azul", "11111111111111", "Gestão Financeira");
+		CadastroPJ meuPet = new CadastroPJ("Meu Pet", "11111111111111", "Petshop");
+		CadastroPJ mercedes = new CadastroPJ("Mercedes", "11111111111111", "Automóveis");
+		CadastroPJ bancoInter = new CadastroPJ("Banco Inter", "11111111111111", "Banco");
+		//PF///////////////////////////////////////////////////////////////////////////////////////
+		CadastroPF aluno1 = new CadastroPF("Brenner");
+		CadastroPF aluno2 = new CadastroPF("Bela");
+		CadastroPF aluno3 = new CadastroPF("Bonner");
+		CadastroPF aluno4 = new CadastroPF("Carla");
+		CadastroPF aluno5 = new CadastroPF("Joaquina");
+		CadastroPF aluno6 = new CadastroPF("Julio");
+		CadastroPF aluno7 = new CadastroPF("Fabiana");
+		CadastroPF aluno8 = new CadastroPF("Ana");
+		CadastroPF aluno9 = new CadastroPF("Jukes");
+		CadastroPF aluno10 = new CadastroPF("Bartolomeu");
+		CadastroPF aluno11 = new CadastroPF("Yago");
 		
+		
+		//ADCIONANDO AS EMPRESAS NOS CURSOS
 		cursoDesign.addEmpresaParceira(portoSeguro);
 		cursoDesign.addEmpresaParceira(cocaCola);
 		cursoDataScience.addEmpresaParceira(portoSeguro);
 		cursoDesenvolvimento.addEmpresaParceira(portoSeguro);
 		cursoMatematicaFinanceira.addEmpresaParceira(contaAzul);
 		cursoAnaliseBalanco.addEmpresaParceira(nVidia);
+		cursoNeuromarketing.addEmpresaParceira(bancoInter);
+		cursoMarketingDigital.addEmpresaParceira(mercedes);
+		cursoAnaliseBalanco.addEmpresaParceira(meuPet);
+		
+		
+		//ADCIONANDO OS ALUNOS NOS CURSOS
+		cursoDesign.matricularAluno(aluno1);
+		cursoDesign.matricularAluno(aluno2);
+		cursoDataScience.matricularAluno(aluno3);
+		cursoDataScience.matricularAluno(aluno4);
+		cursoDesenvolvimento.matricularAluno(aluno5);
+		cursoDesenvolvimento.matricularAluno(aluno6);
+		cursoMatematicaFinanceira.matricularAluno(aluno7);
+		cursoMarketingDigital.matricularAluno(aluno8);
+		cursoAnaliseBalanco.matricularAluno(aluno9);
+		cursoNeuromarketing.matricularAluno(aluno10);
+		
 		
 	}
+	
 	public static void main(String[] args)
 	{
 		
@@ -294,40 +330,47 @@ public class main {
 		}
 		else if (opcaoMenu == 2) 
 		{
+			int opcaoAlunoEmpresa = 0;
 			//////////////VISUALIZAÇÃO////////////////////////////////////////////////////////////////
-			
-			System.out.println("1-Visualizar Alunos");
-			System.out.println("2-Visualizar Empresas");
-			
-			int opcaoAlunoEmpresa = leia.nextInt();
-			leia.nextLine();
-			
-			while(opcaoAlunoEmpresa < 1 || opcaoAlunoEmpresa> 2) {
-				System.out.println("Opção Inválida, digite 1 ou 2");
+			do {
+				
 				System.out.println("1-Visualizar Alunos");
 				System.out.println("2-Visualizar Empresas");
-				opcaoAlunoEmpresa = leia.nextInt();	
+				System.out.println("3-Menu Principal");
+				opcaoAlunoEmpresa = leia.nextInt();
 				leia.nextLine();
-			}
-			
-			if(opcaoAlunoEmpresa == 1) {
-				//Alunos
-				System.out.println("teste");
 				
-				
-				
-			}else {
-				//Empresas
-				
-				for(Cursos curso: todosCursos) {
-					for(CadastroPJ empresa : curso.getEmpresasParceiras()) {
-						System.out.println(empresa.getNome()+ " - " + curso.getCurso());
-					}
-					
+				while(opcaoAlunoEmpresa < 1 || opcaoAlunoEmpresa> 3) {
+					System.out.println("Opção Inválida, digite 1, 2 ou 3");
+					System.out.println("1-Visualizar Alunos");
+					System.out.println("2-Visualizar Empresas");
+					opcaoAlunoEmpresa = leia.nextInt();	
+					leia.nextLine();
 				}
 				
-				
-			}
+				if(opcaoAlunoEmpresa == 1) {
+					//Alunos
+					System.out.println("----------------Lista de alunos matriculados------------------");
+					for(Cursos curso: todosCursos) {
+						for(CadastroPF aluno: curso.getAlunos()) {
+							System.out.println(aluno.getNome() +" - "+ curso.getSegmento());
+						}
+					}
+					
+					System.out.println("-----------------Fim lista de alunos---------------------------");
+				}else {
+					//Empresas
+					System.out.println("----------------Lista de empresas que desejam parceirias--------");
+					for(Cursos curso: todosCursos) {
+						for(CadastroPJ empresa : curso.getEmpresasParceiras()) {
+							System.out.println(empresa.getNome()+ " - " + curso.getCurso());
+						}
+						
+					}
+					System.out.println("----------------Fim lista de empresas----------------------------");
+					
+				}
+			}while(opcaoAlunoEmpresa != 3);
 			
 			
 			////////////////////////VOLTANDO PRO MENU////////////////////////////////////////////////////////////
@@ -339,9 +382,6 @@ public class main {
 		{
 			System.out.println("Obrigado por utilizar nosso sistema!");
 		}
-		
-		
-		
 
 		
 		

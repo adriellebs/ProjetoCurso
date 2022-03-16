@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class CadastroPJ extends Cadastro {
 	
-	
+	//ATRIBUTOS////////////////////////////////////////////////////////////////////////////////
 	private String cnpj;
 	private String segmento;
 	
-	
+	//CONSTRUTORES///////////////////////////////////////////////////////////////////////////////
 	public CadastroPJ(String nome , String cnpj, String segmento) 
 	{
 		super(nome);
@@ -20,6 +20,8 @@ public class CadastroPJ extends Cadastro {
 	public CadastroPJ() {
 		
 	}
+	
+	//GETTERS AND SETTERS/////////////////////////////////////////////////////////////////////////////////////////
 	public String getCnpj() 
 	{
 		return cnpj;
@@ -40,6 +42,7 @@ public class CadastroPJ extends Cadastro {
 		this.segmento = segmento;
 	}
 	
+	//OUTRAS FUNÇÕES
 	public void validarCnpj()
 	{
 		Scanner leia = new Scanner(System.in);
