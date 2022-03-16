@@ -76,7 +76,7 @@ public class Cursos {
 	{
 		
 		System.out.println(this.menu);
-		
+		leia.nextLine();
 		try {
 			
 			System.out.println("\nDigite o número do segmento de sua escolha: "
@@ -84,15 +84,15 @@ public class Cursos {
 					+ "\n2 - Marketing"
 					+ "\n3 - Contabilidade e Finanças");
 			int segmento = leia.nextInt();
+			leia.nextLine();
 			
 			while (segmento < 1 || segmento > 3) {
-				leia.nextLine();
 				System.out.println("\nOpção inválida. Escolha o seu curso: "
 						+ "\n1 - Tecnologia"
 						+ "\n2 - Marketing"
 						+ "\n3 - Contabilidade e Finanças");
 				segmento = leia.nextInt();
-				
+				leia.nextLine();
 			}
 			
 			switch(segmento) {
@@ -103,16 +103,18 @@ public class Cursos {
 						+ "\n2 - Data Science"
 						+ "\n3 - Desenvolvimento Web");
 				int escolha = leia.nextInt();
-			
+				leia.nextLine();
+				
 				while (escolha < 1 || escolha > 3) {
-					leia.nextLine();
 					System.out.println("\nOpção inválida. Escolha o seu curso: "
 							+ "\n1 - Design "
 							+ "\n2 - Data Science "
 							+ "\n3 - Desenvolvimento Web");
 					escolha = leia.nextInt();
+					leia.nextLine();
 						
 				}
+				
 				switch(escolha) {
 				case 1: 
 					setCurso("Design");
@@ -131,15 +133,17 @@ public class Cursos {
 						+ "\n1 - Neuromarketing"
 						+ "\n2 - Marketing Digital");
 				int escolher = leia.nextInt();
+				leia.nextLine();
 				
 				while (escolher < 1 || escolher > 2) {
-					leia.nextLine();
 					System.out.println("\nOpção inválida. Escolha o seu curso: "
 							+ "\n1 - Neuromarketing "
 							+ "\n2 - Marketing Digital");
 					escolher = leia.nextInt();
+					leia.nextLine();
 						
 				}
+				
 				switch(escolher) {
 				case 1: 
 					setCurso("Neuromarketing");
@@ -155,14 +159,15 @@ public class Cursos {
 						+ "\n1 - Matemática Financeira"
 						+ "\n2 - Controladoria\n3 - Análise de balanços");
 				int escolh = leia.nextInt();
+				leia.nextLine();
 				
 				while (escolh < 1 || escolh > 3) {
-					leia.nextLine();
 					System.out.println("\nOpção inválida. Escolha o seu curso: "
 							+ "\n1 - Matemática Financeira "
 							+ "\n2 - Controladoria "
 							+ "\n3 - Análise de balanços");
 					escolh = leia.nextInt();
+					leia.nextLine();
 						
 				}
 				

@@ -42,8 +42,6 @@ public class main {
 		CadastroPF aluno8 = new CadastroPF("Ana");
 		CadastroPF aluno9 = new CadastroPF("Jukes");
 		CadastroPF aluno10 = new CadastroPF("Bartolomeu");
-		CadastroPF aluno11 = new CadastroPF("Yago");
-		
 		
 		//ADCIONANDO AS EMPRESAS NOS CURSOS
 		cursoDesign.addEmpresaParceira(portoSeguro);
@@ -211,7 +209,7 @@ public class main {
 					
 					//Escolher o curso
 					cursoEscolhido.escolherCurso();
-					
+					leia.nextLine();
 					if(cursoEscolhido.getCurso() == "Design") 
 					{
 						cursoEscolhido = cursoDesign;
