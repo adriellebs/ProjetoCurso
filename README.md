@@ -3,7 +3,7 @@
 
  Projeto proposto pelo curso de programação fullstack oferecido pela plataforma Digital House Brasil para o programa Start Porto Seguro.
 
-🚧 Em desenvolvimento ✔️ 🚧
+🚧 Finalizado ✔️ 🚧
 
 
 ## 🎯 Objetivo
