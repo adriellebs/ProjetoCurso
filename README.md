@@ -1,7 +1,7 @@
 # 
 ## 💻 Sobre
 
- Projeto proposto pelo curso de programação fullstack oferecido pela plataforma Digital House Brasil para o programa Start Porto Seguro.
+ Projeto proposto pelo curso de Programação Java Fullstack oferecido pela Digital House Brasil no programa Start Porto Seguro.
 
 🚧 Finalizado ✔️ 🚧
 
@@ -10,7 +10,7 @@
 
 ```bash
   
-# Desenvolver um sistema simples, com o objetivo de avaliar os nossos conheciimentos em Java puro.
+# Desenvolver um sistema simples, com o objetivo de avaliar os nossos conhecimentos em Java puro.
 
 # Treinamento de lógica de programação, programação orientada a objetos, arrays, loop, laços de decisão.
 
